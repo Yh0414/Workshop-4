@@ -19,7 +19,9 @@ public class XAxisSpin : MonoBehaviour
     private void Update()
     {
         var angle = this.spinSpeed * Time.deltaTime;
+        //var angle = this.spinSpeed * Time.time;
         var axis = new Vector3(1.0f, 0.0f, 0.0f);
-        transform.localRotation *= Quaternion.AngleAxis(angle, axis);
+        //transform.localRotation *= Quaternion.AngleAxis(angle, axis);
+        this.transform.localPosition += new Vector3(0.0f, 0.0f, 1.0f);
     }
 }
